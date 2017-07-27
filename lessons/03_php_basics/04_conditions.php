@@ -1,6 +1,7 @@
 <?php
 
 $time = date("H");
+echo $time."<br>";
 
 if ($time < "10") {
     echo "Have a good morning!";
@@ -10,7 +11,9 @@ if ($time < "10") {
     echo "Have a good night!";
 }
 
-$favColor = "yellow";
+echo "<br><br><br>";
+
+$favColor = "red";
 
 switch ($favColor) {
     case "red":

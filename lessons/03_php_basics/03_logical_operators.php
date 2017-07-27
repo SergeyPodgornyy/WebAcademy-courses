@@ -10,10 +10,10 @@ if ($x == 100 && $y == 50) {
     echo "Hello world! 2<br>";
 }
 
-if ($x == 100 or $y == 80) {
+if ($x == 99 or $y == 50) {
     echo "Hello world! 3<br>";
 }
-if ($x == 100 || $y == 80) {
+if ($x == 100 || $z == 80) {
     echo "Hello world! 4<br>";
 }
 

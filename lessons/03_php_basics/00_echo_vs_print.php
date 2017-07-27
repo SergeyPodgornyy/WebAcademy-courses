@@ -27,6 +27,16 @@ print "Study PHP at $txt<br>";
 $x = 5; $y = 4;
 print $x + $y;
 
+
+
+print "<br>";
+$result = print "some string<br>";
+echo "Result print is - ", $result;
+
+
+
+
+
 echo '<br>';
 echo __FILE__;
 echo '<br>';
