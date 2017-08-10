@@ -2,10 +2,9 @@
 
 session_start();
 
-// error_log(print_r($_SESSION,1));
-
 if (!isset($_SESSION['UserId'])) {
     header('Location: index.php');
+    exit;
 }
 
 ?>
