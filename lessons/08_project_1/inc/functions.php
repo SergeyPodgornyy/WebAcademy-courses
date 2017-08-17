@@ -1,7 +1,6 @@
 <?php
 
-function getMediaListItem($id, $item)
-{
+function getMediaListItem($id, $item) {
     return "<li>
                 <a href=\"details.php?id={$id}\">
                     <img src=\"{$item['img']}\" alt=\"{$item['title']}\">
@@ -10,8 +9,7 @@ function getMediaListItem($id, $item)
             </li>";
 }
 
-function getSortedItems($catalog, $category)
-{
+function getSortedItems($catalog, $category) {
     $output = [];
 
     foreach ($catalog as $id => $item) {
@@ -26,4 +24,18 @@ function getSortedItems($catalog, $category)
 
     asort($output);
     return array_keys($output);
+}
+
+function getOptionsList(array $array, $type) {
+    $result = '';
+
+    foreach ($array as $key => $value) {
+        $result .= '<optgroup label="'.$key.'">';
+        foreach ($value as $name) {
+            $result .= '<option value="'.$name.'"'.($name == $type ? ' selected ' : '' ).'>'.$name.'</option>';
+        }
+        $result .= '</optgroup>';
+    }
+
+    return $result;
 }

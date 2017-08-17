@@ -642,6 +642,7 @@ form td textarea {
     border: 1px solid #a5a5a5;
     font-size: 14px;
     font-family: 'Open Sans', sans-serif;
+    resize: vertical;
 }
 form input[type="submit"] {
     width: 475px;
@@ -659,7 +660,11 @@ form input[type="submit"] {
     background: #358dce;
     cursor: pointer;
   }
-
+.required{
+    color:red;
+    font-weight: normal;
+    font-style: italic;
+}
 .search {
     background: #f0eeed;
     border-bottom: 3px solid #dddddd;

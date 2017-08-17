@@ -1,0 +1,102 @@
+            -- Reference: https://dev.mysql.com/doc/refman/5.7/en/storage-requirements.html
+
+
+
+UNSIGNED    Specifies unsigned numbers
+
+Integers:
+
+TINYINT     1 byte - It can store numbers from -128 to 127 (0 - 255 for UNSIGNED)
+SMALLINT    2 bytes - Range from -32 768 to 32 767 (0 - 65535)
+MEDIUMINT   3 bytes - Range from -8 388 608 to 8 388 607 (0 - 16777215)
+INT         4 bytes - Range from -2 147 483 648 to 2 147 483 647 (0 - 4294967295)
+BIGINT      8 bytes - Range from -9 223 372 036 854 775 808 to 9 223 372 036 854 775 807 (0 - 18446744073709551615)
+
+            -- Reference: https://dev.mysql.com/doc/refman/5.7/en/integer-types.html
+
+
+
+Floats:
+
+FLOAT       Small-precision Floating-Point Type represent approximate numeric data values
+DOUBLE      Double-precision Floating-Point Type represent approximate numeric data values
+REAL        Synonym for DOUBLE
+DECIMAL     Fixed-Point Type  store exact numeric data values
+NUMERIC     Synonym for DECIMAL
+
+    HINT: Because floating-point values are approximate and not stored
+    as exact values, attempts to treat them as exact in comparisons
+    may lead to problems
+
+            -- Reference: https://dev.mysql.com/doc/refman/5.7/en/floating-point-types.html
+            -- Reference: https://dev.mysql.com/doc/refman/5.7/en/fixed-point-types.html
+
+
+
+Strings:
+
+CHAR        When values are stored, they are right-padded with spaces
+            to the specified length. When CHAR values are retrieved,
+            trailing spaces are removed
+VARCHAR     Values are variable-length strings
+            The length can be specified as a value from 0 to 65,535
+TINYTEXT    Can store no more than 255 characters
+TEXT        Can store no more than 65 535 characters
+MEDIUMTEXT  Can store no more than 16 777 215 characters
+LONGTEXT    Can store no more than 4 294 967 295 characters
+
+            -- Reference: https://dev.mysql.com/doc/refman/5.7/en/char.html
+            -- Reference: https://dev.mysql.com/doc/refman/5.7/en/blob.html
+
+
+
+Binaries:
+
+TINYBLOB    Can store no more than 255 characters
+BLOB        Can store no more than 65 535 characters
+MEDIUMBLOB  Can store no more than 16 777 215 characters
+LONGBLOB    Can store no more than 4 294 967 295 characters
+
+            -- Reference: https://dev.mysql.com/doc/refman/5.7/en/blob.html
+
+BINARY      Similar to CHAR, but contains binary string rather than nonbinary string
+VARBINARY   Similar to VARCHAR, but contains binary string rather than nonbinary string
+
+            -- Reference: https://dev.mysql.com/doc/refman/5.7/en/binary-varbinary.html
+
+
+
+Date and Time:
+
+YEAR        1-byte type used to represent year values
+DATE        Displays DATE values in 'YYYY-MM-DD' format
+            Range is '1000-01-01' to '9999-12-31'
+TIME        Displays TIME values in 'HH:MM:SS' format
+            Range from '-838:59:59' to '838:59:59'
+DATETIME    Contain both date and time parts and displays DATETIME values
+            in 'YYYY-MM-DD HH:MM:SS' format
+            Range is '1000-01-01 00:00:00' to '9999-12-31 23:59:59'
+TIMESTAMP   Contain both date and time parts
+            Range of '1970-01-01 00:00:01' UTC to '2038-01-19 03:14:07' UTC
+
+            -- Reference: https://dev.mysql.com/doc/refman/5.7/en/datetime.html
+            -- Reference: https://dev.mysql.com/doc/refman/5.7/en/time.html
+            -- Reference: https://dev.mysql.com/doc/refman/5.7/en/year.html
+
+
+Others:
+
+ENUM        string object with a value chosen from a list of permitted values
+            that are enumerated explicitly in the column specification
+            at table creation time (One of permitted)
+
+SET         string object that can have zero or more values, each of which
+            must be chosen from a list of permitted values specified
+            when the table is created (Few of permitted)
+
+JSON        As of MySQL 5.7.8, MySQL supports a native JSON data type
+            that enables efficient access to data in JSON
+
+            -- Reference: https://dev.mysql.com/doc/refman/5.7/en/enum.html
+            -- Reference: https://dev.mysql.com/doc/refman/5.7/en/set.html
+            -- Reference: https://dev.mysql.com/doc/refman/5.7/en/json.html

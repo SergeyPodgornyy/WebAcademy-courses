@@ -50,16 +50,16 @@ include 'inc/header.php';
                 <?php if ($section == 'books') : ?>
 
                     <tr>
-                        <th>ISBN</th>
-                        <td><?= $item['isbn'] ?></td>
+                        <th>Authors</th>
+                        <td><?= implode(', ', $item['authors']) ?></td>
                     </tr>
                     <tr>
                         <th>Publisher</th>
                         <td><?= $item['publisher'] ?></td>
                     </tr>
                     <tr>
-                        <th>Authors</th>
-                        <td><?= implode(', ', $item['authors']) ?></td>
+                        <th>ISBN</th>
+                        <td><?= $item['isbn'] ?></td>
                     </tr>
 
                 <?php elseif ($section == 'movies') : ?>
